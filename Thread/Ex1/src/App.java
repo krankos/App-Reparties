@@ -13,26 +13,26 @@ public class App {
 
         // Version 1
 
-        CounterThread t1 = new CounterThread("A", 10);
-        CounterThread t2 = new CounterThread("B", 100);
-        CounterThread t3 = new CounterThread("C", 30);
+        // CounterThread t1 = new CounterThread("A", 10);
+        // CounterThread t2 = new CounterThread("B", 100);
+        // CounterThread t3 = new CounterThread("C", 30);
 
-        t1.start();
-        t2.start();
-        t3.start();
+        // t1.start();
+        // t2.start();
+        // t3.start();
 
         // Version 2
-        // CounterThreadRunnable t1 = new CounterThreadRunnable(60);
-        // CounterThreadRunnable t2 = new CounterThreadRunnable(50);
-        // CounterThreadRunnable t3 = new CounterThreadRunnable(100);
+        CounterThreadRunnable t1 = new CounterThreadRunnable(60);
+        CounterThreadRunnable t2 = new CounterThreadRunnable(50);
+        CounterThreadRunnable t3 = new CounterThreadRunnable(100);
 
-        // Thread thread1 = new Thread(t1, "A");
-        // Thread thread2 = new Thread(t2, "B");
-        // Thread thread3 = new Thread(t3, "C");
+        Thread thread1 = new Thread(t1, "A");
+        Thread thread2 = new Thread(t2, "B");
+        Thread thread3 = new Thread(t3, "C");
 
-        // thread1.start();
-        // thread2.start();
-        // thread3.start();
+        thread1.start();
+        thread2.start();
+        thread3.start();
 
     }
 }

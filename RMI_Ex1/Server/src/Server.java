@@ -7,22 +7,32 @@ public class Server {
 
     public static void main(String[] args) {
 
+        // try {
+        // // Create a new instance of the EchoImpl class
+        // EchoImpl echo = new EchoImpl();
+
+        // // Create a new instance of the AddImpl class
+        // AddImpl add = new AddImpl();
+
+        // // Create a new instance of the Registry class
+        // LocateRegistry.createRegistry(1099);
+
+        // // Bind the echo object to the registry
+        // Naming.rebind("rmi://localhost:" + PORT + "/echo", echo);
+
+        // // Bind the add object to the registry
+        // Naming.rebind("rmi://localhost:" + PORT + "/add", add);
+
+        // System.out.println("Server is running...");
+        // } catch (Exception e) {
+        // System.out.println("Erreur d'accès");
+        // System.out.println(e.toString());
+        // }
+
         try {
-            // Create a new instance of the EchoImpl class
-            EchoImpl echo = new EchoImpl();
-
-            // Create a new instance of the AddImpl class
-            AddImpl add = new AddImpl();
-
-            // Create a new instance of the Registry class
+            ServerImpl server = new ServerImpl();
             LocateRegistry.createRegistry(1099);
-
-            // Bind the echo object to the registry
-            Naming.rebind("rmi://localhost:" + PORT + "/echo", echo);
-
-            // Bind the add object to the registry
-            Naming.rebind("rmi://localhost:" + PORT + "/add", add);
-
+            Naming.rebind("rmi://localhost:" + PORT + "/MyServer", server);
             System.out.println("Server is running...");
         } catch (Exception e) {
             System.out.println("Erreur d'accès");
