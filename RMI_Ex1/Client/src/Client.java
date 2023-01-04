@@ -22,7 +22,7 @@ public class Client {
             System.out.println("Addition: " + server.add(129, 45));
 
         } catch (Exception e) {
-            System.out.println("Erreur d'accès");
+            System.out.println("Erreur d'accès**************");
             System.out.println(e.toString());
         }
     }

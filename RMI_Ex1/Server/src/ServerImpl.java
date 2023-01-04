@@ -1,6 +1,6 @@
 import java.rmi.server.UnicastRemoteObject;
 
-public class ServerImpl extends UnicastRemoteObject implements EchoInterface, AddInterface, ServerInterface {
+public class ServerImpl extends UnicastRemoteObject implements ServerInterface {
     public ServerImpl() throws java.rmi.RemoteException {
         super();
     }
